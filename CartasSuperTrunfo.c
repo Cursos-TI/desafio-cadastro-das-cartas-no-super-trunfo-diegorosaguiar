@@ -6,7 +6,7 @@ int main(){
     char codigodacarta[5];
     char nomedacidade[20];
     int populacao, numerodepontosturisticos;
-    float area, pib;
+    float area, pib, densidade, percapita;
 
     printf("Olá usuário! Precisamos da sua ajuda no cadastramento das cartas do Super Trunfo! Por favor preencha as informações solicitadas:\n");
     printf("\n");
@@ -31,7 +31,7 @@ int main(){
     scanf("%f", &area);
     printf("\n");
 
-    printf("Qual o valor do produto internno bruto? ");
+    printf("Qual o valor do produto interno bruto? ");
     scanf("%f", &pib);
     printf("\n");
     
@@ -49,6 +49,12 @@ int main(){
     printf("Área: %f\n", area);
     printf("PIB: %f\n", pib);
     printf("Números de pontos turísticos: %d\n", numerodepontosturisticos);
+
+    densidade = populacao / area;
+    printf("Densidade populacional: %.2f\n", densidade);
+
+    percapita = pib / populacao;
+    printf("PIB Per Capita: %2f\n", percapita);
     printf("\n");
     
 
@@ -76,14 +82,14 @@ int main(){
     scanf("%f", &area);
     printf("\n");
 
-    printf("Qual o valor do produto internno bruto? ");
+    printf("Qual o valor do produto interno bruto? ");
     scanf("%f", &pib);
     printf("\n");
     
     printf("Qual a quantidade de pontos turísticos da cidade? ");
     scanf("%d", &numerodepontosturisticos);
     printf("\n");
-    
+   
     printf("Obrigado pelas informações! Carta cadastrada com sucesso! Segue abaixo o resumo do cadastro.\n");
     printf("\n");
         
@@ -94,6 +100,12 @@ int main(){
     printf("Área: %f\n", area);
     printf("PIB: %f\n", pib);
     printf("Números de pontos turísticos: %d\n", numerodepontosturisticos);
+
+    densidade = populacao / area;
+    printf("Densidade populacional: %.2f\n", densidade);
+
+    percapita = pib / populacao;
+    printf("PIB Per Capita: %2f\n", percapita);
     
 
 }
