@@ -6,12 +6,14 @@
         // Declarações das variáveis
         
 
-        char estado1, estado2 = 'A';
+        char estado1, estado2;
         char codigodacarta1 [2], codigodacarta2 [2];
         char nomedacidade1 [20], nomedacidade2 [20];
         int numerodepontosturisticos1, numerodepontosturisticos2;
         unsigned long int populacao1, populacao2;
-        float area1, area2, pib1, pib2, densidade1, densidade2, percapita1, percapita2, superPoder1, superPoder2;
+        float area1 = 500;
+        float area2 = 1000;
+        float pib1, pib2, densidade1, densidade2, percapita1, percapita2, superPoder1, superPoder2;
 
 
         // Carta 1 - recolhimento de informações
@@ -20,31 +22,32 @@
         printf("Olá usuário! Precisamos da sua ajuda no cadastramento das cartas do Super Trunfo! Por favor preencha as informações solicitadas:\n");
         printf("\n");
 
-        printf("Defina uma letra de 'A' a 'H' para essa carta. ");
+        printf("Defina uma letra de 'A' a 'H' para essa carta.\n");
         scanf("%c", &estado1);
         printf("\n");
 
-        printf("Agora defina qual código essa carta deverá ter entre '01' a '04'. ");
+        printf("Agora defina qual código essa carta deverá ter entre '01' a '04'.\n");
         scanf("%s", &codigodacarta1);
         printf("\n");
                 
-        printf("Qual a Cidade dessa carta? ");
+        printf("Qual a Cidade dessa carta?\n");
         scanf("%s", &nomedacidade1);
         printf("\n");
 
-        printf("Qual o número de habitantes da cidade? ");
+        printf("Qual o número de habitantes da cidade?\n");
         scanf("%lu", &populacao1);
         printf("\n");
 
-        printf("Qual a área da cidade em quilômetros quadradados? ");
-        scanf("%f", &area1);
+        printf ("Área da cidade: %f\n", area1);
+        // printf("Qual a área da cidade em quilômetros quadradados?\n");
+        // scanf("%f", &area1);
         printf("\n");
 
-        printf("Qual o valor do produto interno bruto? ");
+        printf("Qual o valor do produto interno bruto?\n");
         scanf("%f", &pib1);
         printf("\n");
         
-        printf("Qual a quantidade de pontos turísticos da cidade? ");
+        printf("Qual a quantidade de pontos turísticos da cidade?\n");
         scanf("%d", &numerodepontosturisticos1);
         printf("\n");
         
@@ -83,31 +86,32 @@
         printf("Me ajuda a cadastrar outra carta?\n");
         printf("\n");
 
-        printf("Defina uma letra de 'A' a 'H' para essa carta. ");
+        printf("Defina uma letra de 'A' a 'H' para essa carta.\n");
         scanf("%c", &estado2);
         printf("\n");
 
-        printf("Agora defina qual código essa carta deverá ter entre '01' a '04'. ");
+        printf("Agora defina qual código essa carta deverá ter entre '01' a '04'.\n");
         scanf("%s", &codigodacarta2);
         printf("\n");
-                
-        printf("Qual a Cidade dessa carta? ");
+
+        printf("Qual a Cidade dessa carta?\n");
         scanf("%s", &nomedacidade2);
         printf("\n");
-
-        printf("Qual o número de habitantes da cidade? ");
+        
+        printf("Qual o número de habitantes da cidade?\n");
         scanf("%lu", &populacao2);
         printf("\n");
 
-        printf("Qual a área da cidade em quilômetros quadradados? ");
-        scanf("%f", &area2);
+        printf ("Área da cidade: %f\n", area2);
+        // printf("Qual a Cidade dessa carta?\n");
+        // scanf("%s", &nomedacidade2);
         printf("\n");
 
-        printf("Qual o valor do produto interno bruto? ");
+        printf("Qual o valor do produto interno bruto?\n");
         scanf("%f", &pib2);
         printf("\n");
         
-        printf("Qual a quantidade de pontos turísticos da cidade? ");
+        printf("Qual a quantidade de pontos turísticos da cidade?\n");
         scanf("%d", &numerodepontosturisticos2);
         printf("\n");
     
@@ -143,15 +147,31 @@
 
         // Comparações entre as cartas 1 e 2
 
-
-        printf("Agora vamos comparar a carta campeã! \n");
+        printf("Agora vamos comparar a carta campeã!\n");
         printf("População: %d\n", populacao1 > populacao2);
         printf("Área: %d\n", area1 > area2); 
         printf("PIB: %d\n", pib1 > pib2); 
         printf("Pontos Turísticos: %d\n", numerodepontosturisticos1 > numerodepontosturisticos2); 
-        printf("Densidade Populacional: %d\n", densidade1 > densidade2); 
+        printf("Densidade Populacional: %d\n", densidade1 < densidade2); 
         printf("PIB Percapita: %d\n", percapita1 > percapita2); 
         printf("Super Poder: %d\n", superPoder1 > superPoder2); 
+        printf("\n");
+
+        // Comparação entre atributos específicos das Cidades
+
+        printf ("Comparação entre o atributo Área das cidades:\n");
+        printf ("%s: %f\n", nomedacidade1, area1);
+        printf ("%s: %f\n", nomedacidade2, area2);
+        printf("\n");
+        
+        if (area1 > area2){
+            printf ("A cidade %s é a campeã em área de extensão!\n", nomedacidade1);
+
+        } else {
+            printf ("A cidade %s é a campeã em área de extensão!\n", nomedacidade2);
+        }
+
+        printf("\n");
 
         return 0;
     }
